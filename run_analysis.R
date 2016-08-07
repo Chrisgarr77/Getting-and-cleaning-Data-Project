@@ -42,7 +42,7 @@ std_col_idx <- grep("std", names(allData), ignore.case= T)
 std_col_names <- names(allData)[std_col_idx]
 meanstddata <- allData[,c("subject_id", "activity_id", mean_col_names, std_col_names)]
 
-# Merge the datasets to get one datasat with descriptive activity names 
+# Merge the datasets to get one dataset with descriptive activity names 
 desNames <- merge(activityLabels, meanstddata, by.x="activity_id", by.y="activity_id", all= T)
 
 # Melt the dataset 
